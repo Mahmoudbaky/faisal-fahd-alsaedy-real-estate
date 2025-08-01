@@ -47,6 +47,12 @@ const RealEstateAppraisalPurposes = () => {
       icon: LineChart,
       description: "لتقييم العوائد المحتملة للعقارات الاستثمارية.",
     },
+    {
+      id: 8,
+      title: "أغراض نزع الملكية",
+      icon: LineChart,
+      description: "لتقييم العوائد المحتملة للعقارات الاستثمارية.",
+    },
   ]
 
 

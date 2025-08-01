@@ -30,7 +30,7 @@ const ServicesSection = () => {
                 <div className="mx-auto bg-chart-2/20 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                   <Key className="h-8 w-8 text-chart-2" />
                 </div>
-                <CardTitle className="text-xl"> الدراسات العقارية</CardTitle>
+                <CardTitle className="text-xl"> دراسات الجدوي العقارية</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600">
@@ -56,7 +56,7 @@ const ServicesSection = () => {
                 <div className="mx-auto bg-chart-4/20 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                   <Users className="h-8 w-8 text-chart-4" />
                 </div>
-                <CardTitle className="text-xl"> التدقيق والمراجعة</CardTitle>
+                <CardTitle className="text-xl"> التدقيق و المراجعة لتقارير التقييم</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600">

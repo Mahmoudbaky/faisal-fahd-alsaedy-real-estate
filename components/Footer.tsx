@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Building2 } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { APP_NAME } from "@/lib/constants";
@@ -48,22 +47,20 @@ const footer = () => {
               <ul className="space-y-2 text-gray-400">
                 <li>
                   <Link href="#" className="hover:text-white">
-                    بيع العقارات
+تقييم الأصول العقارية                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-white">
+                  الدراسات العقارية
                   </Link>
                 </li>
                 <li>
                   <Link href="#" className="hover:text-white">
-                    شراء العقارات
-                  </Link>
+الاستشارات                  </Link>
                 </li>
                 <li>
                   <Link href="#" className="hover:text-white">
-                    الاستثمار العقاري
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    إدارة العقارات
+                 التدقيق والمراجعة
                   </Link>
                 </li>
               </ul>
@@ -78,7 +75,7 @@ const footer = () => {
             </div>
           </div>
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 عقارات الخليج. جميع الحقوق محفوظة.</p>
+            <p>&copy; 2025 شركة {APP_NAME}  . جميع الحقوق محفوظة.</p>
           </div>
         </div>
       </footer>
