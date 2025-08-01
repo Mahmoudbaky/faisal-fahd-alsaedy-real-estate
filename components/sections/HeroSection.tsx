@@ -16,7 +16,7 @@ const HeroSection = () => {
             </div>
             <div className="relative">
               <Image
-                src="https://images.pexels.com/photos/31339194/pexels-photo-31339194.jpeg"
+                src="https://images.pexels.com/photos/12808985/pexels-photo-12808985.jpeg"
                 alt="منزل فاخر"
                 width={600}
                 height={400}

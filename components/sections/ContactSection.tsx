@@ -41,7 +41,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-bold">العنوان</h4>
-                    <p className="text-blue-100">الرياض، حي العليا، شارع الملك فهد</p>
+                    <p className="text-blue-100">مكة المكرمة، حي السلامة </p>
                   </div>
                 </div>
               </div>
