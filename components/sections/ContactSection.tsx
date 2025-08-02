@@ -8,7 +8,7 @@ const ContactSection = () => {
     <div className="relative  border-none overflow-hidden">
       <div  className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
          backgroundImage:
-              'url("https://images.pexels.com/photos/30320203/pexels-photo-30320203.png")',
+              'url("https://fintechgate.net/wp-content/uploads/2024/10/IMG-20241024-WA0031.jpg")',
       }}/>
       <div className="absolute inset-0 bg-primary/70"/>
     <section id="contact" className="py-20  text-primary-foreground z-10 relative">
@@ -85,3 +85,6 @@ const ContactSection = () => {
 }
 
 export default ContactSection
+
+
+// url("https://images.pexels.com/photos/30320203/pexels-photo-30320203.png")
