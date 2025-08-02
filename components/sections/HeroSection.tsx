@@ -16,7 +16,7 @@ const HeroSection = () => {
             </div>
             <div className="relative">
               <Image
-                src="https://images.pexels.com/photos/12808985/pexels-photo-12808985.jpeg"
+                src="https://cdn.pixabay.com/photo/2012/11/22/08/18/mecca-66966_1280.jpg"
                 alt="منزل فاخر"
                 width={600}
                 height={400}
@@ -33,3 +33,4 @@ export default HeroSection
 
 
 //  src="https://images.pexels.com/photos/30320203/pexels-photo-30320203.png"
+//  src="https://images.pexels.com/photos/12808985/pexels-photo-12808985.jpeg"
