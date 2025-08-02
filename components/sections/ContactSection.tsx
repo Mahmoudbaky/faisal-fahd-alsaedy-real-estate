@@ -5,7 +5,13 @@ import { Input } from "../ui/input"
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-20 bg-primary text-primary-foreground">
+    <div className="relative  border-none overflow-hidden">
+      <div  className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+         backgroundImage:
+              'url("https://images.pexels.com/photos/30320203/pexels-photo-30320203.png")',
+      }}/>
+      <div className="absolute inset-0 bg-primary/70"/>
+    <section id="contact" className="py-20  text-primary-foreground z-10 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">تواصل معنا</h2>
@@ -74,6 +80,7 @@ const ContactSection = () => {
           </div>
         </div>
       </section>
+    </div>
   )
 }
 

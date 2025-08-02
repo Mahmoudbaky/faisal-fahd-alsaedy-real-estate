@@ -3,7 +3,7 @@ import PropertyTypesSlider from "../PropertyTypesSlider"
 
 const PropertyTypesSection = () => {
   return (
-    <section className="py-20 bg-primary text-primary-foreground">
+    <section id='properties' className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">أنواع الأصول العقارية المتخصصون بها</h2>

@@ -4,8 +4,8 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Phone } from 'lucide-react'
-// import { NAVIGATION_ITEMS, CONTACT_INFO } from '@/lib/constants'
 import { Button } from './ui/button'
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
@@ -37,8 +37,10 @@ const Header = () => {
               </Link>
             </nav>
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Link className='flex items-center' href="https://wa.me/+966561978960" target="_blank" rel="noopener noreferrer">
               <Phone className="h-4 w-4 ml-2" />
-              اتصل الآن
+              واتساب
+            </Link>
             </Button>
           </div>
         </div>
