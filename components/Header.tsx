@@ -14,10 +14,10 @@ const Header = () => {
 
   return (
     <header className="bg-card shadow-sm border-b border-border">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-4 ">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-             <Image src="/images/logo.jpg" alt="Logo" width={60} height={60} />
+            <div className="flex items-center gap-2 ">
+             <Image src="/images/logo.jpg" alt="Logo" width={90} height={80} />
             </div>
             <nav className="hidden md:flex items-center gap-8">
               <Link href="#home" className="header-nav-link text-muted-foreground hover:text-primary font-medium">
