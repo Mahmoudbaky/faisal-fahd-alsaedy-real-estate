@@ -1,7 +1,39 @@
 import { Card, CardHeader, CardTitle , CardContent  , CardDescription} from "../ui/card"
 import { Home, Key, TrendingUp, Users } from "lucide-react"
+import TiltedCard from "../animations/TiltedCard"
 
 const ServicesSection = () => {
+  const services = [
+    {
+      icon: Home,
+      title: "تقييم الأصول العقارية",
+      description: "تقييم دقيق وشامل لجميع أنواع الأصول العقارية لضمان القيمة الحقيقية",
+      bgColor: "bg-accent/20",
+      iconColor: "text-accent-foreground"
+    },
+    {
+      icon: Key,
+      title: "دراسات الجدوي العقارية",
+      description: "دراسات متعمقة للسوق العقاري تساعدك في اتخاذ قرارات استثمارية مستنيرة",
+      bgColor: "bg-chart-2/20",
+      iconColor: "text-chart-2"
+    },
+    {
+      icon: TrendingUp,
+      title: "الاستشارات",
+      description: "استشارات متخصصة للاستثمار العقاري المربح والآمن",
+      bgColor: "bg-chart-3/20",
+      iconColor: "text-chart-3"
+    },
+    {
+      icon: Users,
+      title: "التدقيق و المراجعة لتقارير التقييم",
+      description: "خدمات التدقيق والمراجعة لضمان الشفافية والمصداقية في جميع المعاملات العقارية",
+      bgColor: "bg-chart-4/20",
+      iconColor: "text-chart-4"
+    }
+  ]
+
   return (
     <section id="services" className="py-20">
         <div className="container mx-auto px-4">
@@ -12,58 +44,38 @@ const ServicesSection = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="mx-auto bg-accent/20 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                  <Home className="h-8 w-8 text-accent-foreground" />
-                </div>
-                <CardTitle className="text-xl"> تقييم الأصول العقارية</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600">
-                  تقييم دقيق وشامل لجميع أنواع الأصول العقارية لضمان القيمة الحقيقية
-                </CardDescription>
-              </CardContent>
-            </Card>
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="mx-auto bg-chart-2/20 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                  <Key className="h-8 w-8 text-chart-2" />
-                </div>
-                <CardTitle className="text-xl"> دراسات الجدوي العقارية</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600">
-                  دراسات متعمقة للسوق العقاري تساعدك في اتخاذ قرارات استثمارية مستنيرة
-                </CardDescription>
-              </CardContent>
-            </Card>
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="mx-auto bg-chart-3/20 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                  <TrendingUp className="h-8 w-8 text-chart-3" />
-                </div>
-                <CardTitle className="text-xl"> الاستشارات</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600">
-                  استشارات متخصصة للاستثمار العقاري المربح والآمن
-                </CardDescription>
-              </CardContent>
-            </Card>
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="mx-auto bg-chart-4/20 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                  <Users className="h-8 w-8 text-chart-4" />
-                </div>
-                <CardTitle className="text-xl"> التدقيق و المراجعة لتقارير التقييم</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600">
-                  خدمات التدقيق والمراجعة لضمان الشفافية والمصداقية في جميع المعاملات العقارية
-                </CardDescription>
-              </CardContent>
-            </Card>
+            {services.map((service, index) => {
+              const IconComponent = service.icon
+              return (<TiltedCard
+                  key={index}
+                  imageSrc={undefined}
+                  containerHeight="320px"
+                  containerWidth="100%"
+                  imageHeight="320px"
+                  imageWidth="100%"
+                  scaleOnHover={1.05}
+                  rotateAmplitude={8}
+                  showMobileWarning={false}
+                  showTooltip={false}
+                  displayOverlayContent={true}
+                  overlayContent={
+                    <Card className="w-full h-full text-center hover:shadow-lg transition-shadow bg-white/95 backdrop-blur-sm border-0">
+                      <CardHeader>
+                        <div className={`mx-auto ${service.bgColor} w-16 h-16 rounded-full flex items-center justify-center mb-4`}>
+                          <IconComponent className={`h-8 w-8 ${service.iconColor}`} />
+                        </div>
+                        <CardTitle className="text-xl">{service.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription className="text-gray-600">
+                          {service.description}
+                        </CardDescription>
+                      </CardContent>
+                    </Card>
+                  }
+                />
+              )
+            })}
           </div>
         </div>
       </section>
