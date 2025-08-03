@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, CSSProperties } from "react";
+import React, { useState, useEffect, CSSProperties } from "react";
 
 interface CardFlipProps {
   frontContent: React.ReactNode;
@@ -19,11 +19,20 @@ const CardFlip: React.FC<CardFlipProps> = ({
   flipDuration = 0.6,
 }) => {
   const [isFlipped, setIsFlipped] = useState<boolean>(false);
+  const [isTouchDevice, setIsTouchDevice] = useState<boolean>(false);
 
-  const isTouchDevice =
-    "ontouchstart" in window ||
-    navigator.maxTouchPoints > 0 ||
-    window.matchMedia("(pointer: coarse)").matches;
+  useEffect(() => {
+    // Check for touch device only on client side
+    const checkTouchDevice = () => {
+      return (
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0 ||
+        window.matchMedia("(pointer: coarse)").matches
+      );
+    };
+    
+    setIsTouchDevice(checkTouchDevice());
+  }, []);
 
   const handleMouseEnter = (): void => {
     setIsFlipped(true);
